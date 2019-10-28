@@ -4,7 +4,8 @@ mkdir myproject && cd myproject
 
 # Now create here the 
 # virtual environment inside 
-# its own folder. Call it venv or env or something obvious:
+# its own folder. Call it venv 
+# or env or something obvious:
 pyvenv venv
 
 # Put the venv in your .gitignore:
