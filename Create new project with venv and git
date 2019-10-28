@@ -1,0 +1,39 @@
+
+# make a project folder
+mkdir myproject && cd myproject 
+
+# Now create here the 
+# virtual environment inside 
+# its own folder. Call it venv or env or something obvious:
+pyvenv venv
+
+# Put the venv in your .gitignore:
+git init
+echo '/venv' > .gitignore
+# This keeps your virtual 
+# environment out of source control.
+
+# Activate the environment:
+source venv/bin/activate
+
+# Install something:
+pip install numpy
+
+# Freeze the requirements:
+pip freeze > requirements.txt
+
+# Check requirements.txt into 
+# source control:
+git add requirements.txt
+
+"""
+The basic idea here is simple. 
+Your virtual environment stays 
+in its own folder, which you 
+don’t check into source control. 
+That way your environment does 
+not pollute your project’s root. 
+The requirements, on the other 
+hand, do get checked into source 
+control.
+"""
