@@ -2,17 +2,14 @@
 # make a project folder
 mkdir myproject && cd myproject 
 
-# Now create here the 
-# virtual environment inside 
-# its own folder. Call it venv 
-# or env or something obvious:
+# Now create here the virtual environment inside its 
+# own folder. Call it venv or env or something obvious:
 pyvenv venv
 
 # Put the venv in your .gitignore:
 git init
 echo '/venv' > .gitignore
-# This keeps your virtual 
-# environment out of source control.
+# This keeps your virtual environment out of source control.
 
 # Activate the environment:
 source venv/bin/activate
@@ -23,9 +20,11 @@ pip install numpy
 # Freeze the requirements:
 pip freeze > requirements.txt
 
-# Check requirements.txt into 
-# source control:
+# Check requirements.txt into source control:
 git add requirements.txt
+
+# And maybe do somthing like this:
+python -m pip install --upgrade pip setuptools wheel
 
 """
 The basic idea here is simple. 
